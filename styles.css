@@ -1,12 +1,11 @@
 :root {
-  color-scheme: light;
-  --bg: #f4f6fb;
+  --bg: #f7f8f4;
   --card: #ffffff;
   --text: #1f2937;
-  --muted: #6b7280;
-  --accent: #2563eb;
-  --accent-hover: #1d4ed8;
-  --border: #d1d5db;
+  --muted: #4b5563;
+  --accent: #0f766e;
+  --accent-hover: #0b5f59;
+  --border: #d6d9cf;
 }
 
 * {
@@ -15,15 +14,15 @@
 
 body {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  background: var(--bg);
+  font-family: "Source Sans 3", "Segoe UI", Tahoma, sans-serif;
+  background: radial-gradient(circle at top, #eef4e5 0%, var(--bg) 45%);
   color: var(--text);
 }
 
 .container {
   max-width: 920px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 0 1rem 2rem;
   display: grid;
   gap: 1rem;
 }
@@ -33,7 +32,6 @@ body {
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1.25rem;
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
 }
 
 h1,
@@ -66,13 +64,15 @@ label {
 
 textarea,
 select,
+input,
 button {
   width: 100%;
   font: inherit;
 }
 
 textarea,
-select {
+select,
+input {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 0.65rem 0.75rem;
@@ -85,7 +85,7 @@ button {
   padding: 0.75rem 1rem;
   background: var(--accent);
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -93,13 +93,9 @@ button:hover {
   background: var(--accent-hover);
 }
 
-.output ul {
-  margin: 0.4rem 0 1rem 1.1rem;
-  padding: 0;
-}
-
+.output ul,
 .output ol {
-  margin: 0.4rem 0 0 1.1rem;
+  margin: 0.4rem 0 1rem 1.1rem;
   padding: 0;
 }
 
