@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipe Builder</title>
+    <title>High-Protein Gut-Friendly Meal Generator</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="container">
       <section class="card">
-        <h1>Recipe Builder</h1>
-        <p class="subtitle">Create a meal idea from ingredients you already have.</p>
+        <h1>High-Protein Gut-Friendly Meal Generator</h1>
+        <p class="subtitle">
+          Turn ingredients you already have into a simple meal idea that stays high protein and
+          gut friendly.
+        </p>
 
         <form id="recipe-form" class="form">
           <label for="ingredients">Ingredients</label>
@@ -18,20 +21,11 @@
             id="ingredients"
             name="ingredients"
             rows="4"
-            placeholder="e.g. chicken, spinach, eggs, rice"
+            placeholder="e.g. eggs, spinach, salmon, rice"
             required
           ></textarea>
 
           <div class="row">
-            <div>
-              <label for="dietary">Dietary preference</label>
-              <select id="dietary" name="dietary" required>
-                <option value="high protein">High protein</option>
-                <option value="quick meal">Quick meal</option>
-                <option value="gut friendly">Gut friendly</option>
-              </select>
-            </div>
-
             <div>
               <label for="meal">Meal type</label>
               <select id="meal" name="meal" required>
@@ -40,15 +34,23 @@
                 <option value="Dinner">Dinner</option>
               </select>
             </div>
+
+            <div>
+              <label for="servings">Servings</label>
+              <input id="servings" name="servings" type="number" min="1" max="8" value="2" required />
+            </div>
           </div>
 
-          <button type="submit">Generate Recipe</button>
+          <button type="submit">Generate meal</button>
         </form>
       </section>
 
       <section id="output" class="card output" aria-live="polite">
-        <h2>Your recipe will appear here</h2>
-        <p>Enter ingredients and click <strong>Generate Recipe</strong>.</p>
+        <h2>Your meal will appear here</h2>
+        <p>
+          Enter ingredients and select <strong>Generate meal</strong> to get a simple
+          high-protein, gut-friendly recipe.
+        </p>
       </section>
     </main>
 
